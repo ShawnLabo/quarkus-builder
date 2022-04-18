@@ -12,10 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM gradle:7-jdk11
-
 # https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/docker
 # https://docs.docker.com/engine/install/debian/
+
+FROM gradle:7-jdk11
+
+LABEL org.opencontainers.image.source https://github.com/ShawnLabo/quarkus-builder
 
 RUN apt-get -y update && \
     apt-get -y install \
